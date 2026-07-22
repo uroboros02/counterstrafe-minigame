@@ -281,7 +281,7 @@ input[type=number]::-webkit-outer-spin-button { -webkit-appearance:none; margin:
 #trh-body { padding:6px 12px 8px; display:flex; flex-direction:column; gap:6px; }
 .trh-goals { font-size:9px; color:var(--green); opacity:.85; letter-spacing:.4px; }
 #trh-table { display:flex; flex-direction:column; gap:2px; }
-.trh-row { display:grid; grid-template-columns: 40px 1fr 1fr 1fr 1fr 1fr 1fr;
+.trh-row { display:grid; grid-template-columns: 58px 24px 1fr 1fr 1fr 1fr 1fr 1fr;
     gap:4px; font-size:9px; color:var(--text); align-items:baseline; }
 .trh-row.trh-head { color:#6a7880; border-bottom:1px solid var(--border); padding-bottom:2px; }
 .trh-date { color:#6a7880; }
