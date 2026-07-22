@@ -1,3 +1,12 @@
+# Форк uroboros02 — тренажёр контр-стрейфа с историей тренировок
+
+Форк [crankycs2/counterstrafe-minigame](https://github.com/crankycs2/counterstrafe-minigame) (MPL 2.0).
+Добавлено: панель «История тренировок» — пер-дневные агрегаты (SR%/Perfect/Coasted/торможение),
+автобэкап в `trainer-history.json` этого репо (переживает чистку куков), цели из разбора демок
+(проект cs-demos). Сайт: GitHub Pages из ветки `gh-pages`. Локальная копия: `~/Claude/cs2-trainer`.
+
+---
+
 # pixi-counterstrafe
 
 Counter-Strike 2 counter-strafe trainer built with PIXI.js and a Data-Oriented Design (DOD) architecture. This version is a refactoring of the original trainer, optimized for rendering efficiency and modular logic.
