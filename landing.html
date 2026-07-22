@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counterstrafe Minigame - Version Selection</title>
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --text: #f8fafc;
+            --accent: #38bdf8;
+            --accent-hover: #0ea5e9;
+        }
+        body {
+            margin: 0;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .container {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .card {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 1rem;
+            width: 300px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid #334155;
+            text-decoration: none;
+            color: inherit;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+            border-color: var(--accent);
+        }
+        .card h2 {
+            margin-top: 0;
+            color: var(--accent);
+        }
+        .card p {
+            color: #94a3b8;
+            line-height: 1.5;
+        }
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            background-color: #334155;
+            margin-bottom: 1rem;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1.5rem;
+            background-color: var(--accent);
+            color: #000;
+            font-weight: bold;
+            border-radius: 0.5rem;
+            transition: background-color 0.2s;
+        }
+        .card:hover .btn {
+            background-color: var(--accent-hover);
+        }
+    </style>
+</head>
+<body>
+    <h1>Counterstrafe Minigame</h1>
+    <div class="container">
+        <a href="./main/" class="card">
+            <span class="badge">Stable</span>
+            <h2>Main Version</h2>
+            <p>The standard counterstrafe training experience.</p>
+            <div class="btn">Launch</div>
+        </a>
+        <a href="./2d/" class="card">
+            <span class="badge">Feature Test</span>
+            <h2>2D Movement</h2>
+            <p>New experimental 2D movement simulation and analytics.</p>
+            <div class="btn">Launch</div>
+        </a>
+    </div>
+</body>
+</html>

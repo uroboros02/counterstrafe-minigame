@@ -6,8 +6,8 @@
     <title>CS2 Movement Trainer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="/counterstrafe-minigame/assets/index-wEdjfI78.js"></script>
-  <link rel="stylesheet" crossorigin href="/counterstrafe-minigame/assets/index-But5RyrA.css">
+  <script type="module" crossorigin src="/counterstrafe-minigame/assets/index-AV5cdpe3.js"></script>
+  <link rel="stylesheet" crossorigin href="/counterstrafe-minigame/assets/index-OOyHQYA1.css">
 </head>
 <body>
 <div id="app">
@@ -274,6 +274,30 @@
                 <div id="sym-score-row">
                     <span class="sym-score-label">SYMMETRY</span>
                     <span id="sym-score">—</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ══ TRAINING HISTORY (добавлено в форке: пер-дневная история + GitHub-бэкап) ══ -->
+        <div id="trh-section">
+            <div id="trh-hdr" class="sb-hdr collapsible-hdr">
+                <div style="display:flex;align-items:center;gap:8px;">
+                    <div class="sb-dot green"></div>История тренировок
+                </div>
+                <span id="trh-toggle" class="collapse-arrow">▼</span>
+            </div>
+            <div id="trh-body">
+                <div class="trh-goals">цель: SR ≥80% · Coasted → 0 · в матчах coast% &lt;30</div>
+                <div id="trh-table"></div>
+                <div id="trh-sync-row">
+                    <span id="trh-status" class="trh-status">…</span>
+                    <button id="trh-copy" class="trh-btn">копировать</button>
+                    <button id="trh-token-btn" class="trh-btn">токен</button>
+                </div>
+                <div id="trh-token-row" style="display:none">
+                    <input type="password" id="trh-token" class="trh-token-input"
+                           placeholder="fine-grained token (Contents: RW)">
+                    <button id="trh-token-save" class="trh-btn">ok</button>
                 </div>
             </div>
         </div>
