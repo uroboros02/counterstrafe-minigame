@@ -4,9 +4,12 @@ import { initAudio } from './audio.js';
 const A_KEYS = new Set(['a', 'arrowleft']);
 const D_KEYS = new Set(['d', 'arrowright']);
 
+// фокус в поле ввода (токен, квоты, BPM) — клавиши принадлежат полю, не игре
+const inField = (e) => /^(INPUT|TEXTAREA|SELECT)$/.test(e.target?.tagName || '');
+
 export function initInput(canvasElement, refreshUI, fireCallback) {
     document.addEventListener('keydown', e => {
-        if (e.repeat) return;
+        if (e.repeat || inField(e)) return;
         const k = e.key.toLowerCase();
 
         // Unlock AudioContext on first gesture
@@ -28,6 +31,7 @@ export function initInput(canvasElement, refreshUI, fireCallback) {
     });
 
     document.addEventListener('keyup', e => {
+        if (inField(e)) return;
         const k = e.key.toLowerCase();
         if (A_KEYS.has(k)) { InputState[IN_A] = 0; refreshUI(); e.preventDefault(); }
         else if (D_KEYS.has(k)) { InputState[IN_D] = 0; refreshUI(); e.preventDefault(); }
