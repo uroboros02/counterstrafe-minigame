@@ -1,4 +1,19 @@
 {
- "updated": "2026-07-22T09:03:22.765Z",
- "days": {}
+ "updated": "2026-07-22T12:13:16.496Z",
+ "days": {
+  "2026-07-22": {
+   "shots": 1,
+   "succ": 0,
+   "perfect": 0,
+   "coasted": 0,
+   "moving": 0,
+   "falseStarts": 0,
+   "sumDecel": 0,
+   "decelN": 0,
+   "sumSpd": 0,
+   "spdN": 1,
+   "labShots": 0,
+   "labAcc": 0
+  }
+ }
 }
