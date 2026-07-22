@@ -3,6 +3,7 @@ import {
     SessionLogStrafeLab, SessionLogMicroStrafe,
     estimatedMsToAccurate, realisticTimeToReady,
 } from './state.js';
+import { historyRecordLab } from './history.js';
 
 // ===========================================================================
 //  GENERIC LAB HELPERS  (shared by both modes)
@@ -184,6 +185,7 @@ export function tickLabFrame(dt, velocity) {
 export function recordLabShotEvent(speed, wasAccurate, attemptData) {
     const lab = StrafeLab.active ? StrafeLab : MicroStrafe.active ? MicroStrafe : null;
     if (!lab) return;
+    historyRecordLab(wasAccurate);
 
     lab.shotEvents.push({
         speed,

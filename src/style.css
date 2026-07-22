@@ -275,3 +275,25 @@ input[type=number]::-webkit-outer-spin-button { -webkit-appearance:none; margin:
 .h-res { font-weight:700; font-size:10px; }
 .h-det { color:var(--text-mid); font-size:9px; display:flex; flex-direction:column; gap:2px; }
 .h-decel-bar { height:2px; border-radius:1px; margin-top:3px; max-width:90px; }
+
+/* ═══ TRAINING HISTORY (добавлено в форке) ═══ */
+#trh-section { border-top:1px solid var(--border); flex-shrink:0; }
+#trh-body { padding:6px 12px 8px; display:flex; flex-direction:column; gap:6px; }
+.trh-goals { font-size:9px; color:var(--green); opacity:.85; letter-spacing:.4px; }
+#trh-table { display:flex; flex-direction:column; gap:2px; }
+.trh-row { display:grid; grid-template-columns: 40px 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap:4px; font-size:9px; color:var(--text); align-items:baseline; }
+.trh-row.trh-head { color:#6a7880; border-bottom:1px solid var(--border); padding-bottom:2px; }
+.trh-date { color:#6a7880; }
+.trh-good { color:var(--green); }
+.trh-mid  { color:#facc15; }
+.trh-bad  { color:#ef4444; }
+.trh-empty { font-size:9px; color:#6a7880; padding:4px 0; }
+#trh-sync-row { display:flex; align-items:center; gap:6px; }
+.trh-status { font-size:9px; color:#6a7880; flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.trh-btn { font-size:9px; background:none; border:1px solid var(--border); color:var(--text);
+    padding:2px 8px; border-radius:3px; cursor:pointer; font-family:inherit; }
+.trh-btn:hover { border-color:#3a4248; }
+#trh-token-row { display:flex; gap:6px; }
+.trh-token-input { flex:1; font-size:9px; background:var(--bg1); border:1px solid var(--border);
+    color:var(--text); padding:3px 6px; border-radius:3px; font-family:inherit; }

@@ -276,6 +276,30 @@
             </div>
         </div>
 
+        <!-- ══ TRAINING HISTORY (добавлено в форке: пер-дневная история + GitHub-бэкап) ══ -->
+        <div id="trh-section">
+            <div id="trh-hdr" class="sb-hdr collapsible-hdr">
+                <div style="display:flex;align-items:center;gap:8px;">
+                    <div class="sb-dot green"></div>История тренировок
+                </div>
+                <span id="trh-toggle" class="collapse-arrow">▼</span>
+            </div>
+            <div id="trh-body">
+                <div class="trh-goals">цель: SR ≥80% · Coasted → 0 · в матчах coast% &lt;30</div>
+                <div id="trh-table"></div>
+                <div id="trh-sync-row">
+                    <span id="trh-status" class="trh-status">…</span>
+                    <button id="trh-copy" class="trh-btn">копировать</button>
+                    <button id="trh-token-btn" class="trh-btn">токен</button>
+                </div>
+                <div id="trh-token-row" style="display:none">
+                    <input type="password" id="trh-token" class="trh-token-input"
+                           placeholder="fine-grained token (Contents: RW)">
+                    <button id="trh-token-save" class="trh-btn">ok</button>
+                </div>
+            </div>
+        </div>
+
         <!-- History (Freestyle / TTK) -->
         <div id="hist-section" style="display:flex;flex-direction:column;flex:1;overflow:hidden;min-height:0">
             <div id="hist-hdr">SHOT HISTORY</div>

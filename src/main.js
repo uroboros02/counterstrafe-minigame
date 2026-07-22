@@ -21,6 +21,7 @@ import {
     syncLabConfig, renderRhythmConfig, renderRhythmPresets, syncRhythmConfig,
 } from './ui.js';
 import { initRenderer, renderPixi, getScreenSize } from './renderer.js';
+import { initHistory }                             from './history.js';
 
 let lastTs = null, fpsFrames = 0, fpsTimer = 0, fpsDisplay;
 
@@ -70,6 +71,7 @@ async function boot() {
 
     recomputeBenchmarks();
     initVelBar();
+    initHistory();
     updateBenchmarksUI();
 
     document.getElementById('weapon-select').addEventListener('change', e => {

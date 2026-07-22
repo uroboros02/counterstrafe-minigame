@@ -7,6 +7,7 @@ import {
     HISTORY_MAX, Feedback, SymmetryLog, StrafeLab, MicroStrafe,
 } from './state.js';
 import { recordLabShotEvent, recordLabAbortEvent } from './strafelab.js';
+import { historyRecordShot } from './history.js';
 
 function getArrays() {
     if (STATE.currentMode === MODE.TTK) return { history: HistoryTTK, session: SessionLogTTK };
@@ -122,6 +123,7 @@ export function fireShot(now, updateSidebarCallback) {
         history.unshift(falseRec);
         if (history.length > HISTORY_MAX) history.pop();
         session.push(falseRec);
+        historyRecordShot(falseRec);
         Feedback.active = true; Feedback.label = 'False Start'; Feedback.color = '#ef4444'; Feedback.startMs = now;
         updateSidebarCallback(falseRec);
         resetTTK();
@@ -179,6 +181,7 @@ export function fireShot(now, updateSidebarCallback) {
     history.unshift(rec);
     if (history.length > HISTORY_MAX) history.pop();
     session.push(rec);
+    historyRecordShot(rec);
 
     if (cls.isAttempt) logSymmetry(speed);
 
